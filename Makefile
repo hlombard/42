@@ -5,57 +5,30 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hlombard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/07/05 16:09:00 by hlombard          #+#    #+#              #
-#    Updated: 2019/10/29 19:16:47 by hlombard         ###   ########.fr        #
+#    Created: 2019/09/05 14:45:46 by hlombard          #+#    #+#              #
+#    Updated: 2019/09/05 14:45:53 by hlombard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fractol
-
-CC = gcc
-
-LIBFT = libft/
-
-LIBFT.a = libft/libft.a
-
-INC_FOLD = includes/
-
-INC = includes/fractol.h
-
-MLX = -L ./minilibx -lmlx -framework OpenGL -framework Appkit
-
-CFLAGS = -Wall -Werror -Wextra -O3 -flto -I $(LIBFT) -I $(INC_FOLD)
-
-SRC = srcs/fractol.c \
-	  srcs/init.c	\
-	  srcs/init_types.c \
-	  srcs/keyboard_events.c \
-	  srcs/mouse_events.c \
-	  srcs/gpu.c \
-	  srcs/utils.c
-
-OBJ = $(SRC:.c=.o)
-
-all: $(NAME) $(LIBFT)
-
-$(NAME): $(LIBFT) $(INC_FOLD) Makefile $(OBJ)
-		@make -C $(LIBFT)
-		@make -C minilibx
-		$(CC) -I /usr/local/include $(OBJ) $(LIBFT.a) $(MLX) -framework OpenCL -o $(NAME)
-		@echo "\033[32m$(NAME) created ! \033[0m"
-
-%.o: %.c $(INC)
-		$(CC) $(CFLAGS) -o $@ -c $<
+all:
+	@make -C assembler
+	@make -C vm
+	@make -C disasm
+	@mv ./vm/corewar ./corewar
+	@mv ./assembler/asm ./asm
+	@mv ./disasm/disassembler ./disassembler
 
 clean:
-		@make -C $(LIBFT) clean
-		@make -C minilibx clean
-		@rm -rf $(OBJ)
+	@make -C assembler clean
+	@make -C vm clean
+	@make -C disasm clean
 
-fclean: clean
-		@make -C $(LIBFT) fclean
-		@/bin/rm -f $(NAME)
-		@echo "\033[31m$(NAME) deleted\033[0m"
+fclean:
+	@make -C assembler fclean
+	@make -C vm fclean
+	@make -C disasm fclean
+	@rm -rf asm
+	@rm -rf corewar
+	@rm -rf disassembler
 
 re: fclean all
-
