@@ -31,4 +31,4 @@ You can also enter a 2nd and a 3rd argument to set window resolution : `./fdf ./
 
 Developed on macOS X.
 
-macOS Sierra: Remove the ``Werror`` flag in the Makefile and ignore the "deprecated" warnings.
+macOS Sierra: Ignore the deprecated warnings.
