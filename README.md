@@ -1,30 +1,42 @@
+<img src="https://i.imgur.com/rfq7mfl.png" width="100%" height="300">
 
-<p align="center">
-  <img src="https://i.imgur.com/GzO2IMr.png" alt="42Logo">
-</p>
+# Fillit
 
-<h2 align="center">Some of the Projects I worked on at 42 Paris</h2>
-<br>
+For this project, we get a list of multiple tetriminos that looks like this:
 
-<h4>This repository is hosting the following Projects through its branches : </h4>
+```
+##..
+#...
+#...
+....
 
-- **Common [Left branch]**
-	- [Fillit](https://github.com/hlombard/42/tree/Fillit) : Backtracking algorithm to fit tetriminos in the smallest possible grid
+..##
+..##
+....
+....
+```
 
-- **Algorithm [Right branch]** (from the simplest to the hardest)
-	- [Filler] Uploading soon..
-	- [push_swap] Currently working on it..
-	- [COREWAR](https://github.com/hlombard/42/tree/Corewar) : C implementation of the Core War Game
+The position of the tetriminos in the list has to be asigned to a letter: from "A" to "Z"
 
-- **Graphics [Lower branch]** (from the simplest to the hardest)
-	- [FDF](https://github.com/hlombard/42/tree/FdF) : Wireframe rasterizer with Bresenham's line algorithm
-	- [Fractol](https://github.com/hlombard/42/tree/fractol) : Psychedelic universe of Fractals
-	
-- **Web**
-	- [Piscine PHP](https://github.com/hlombard/Piscine_PHP) : html, css, php, mysql, javascript, jquery.`` (hosted on another repository)``
+The final solution has to be the smallest square grid, containing all the tetriminos.
+
+(Prioritizing placement to the top left of the grid, on letter ascending order)
+
+It looks like this:
+
+<img src="https://i.imgur.com/rRBKn8P.png">
+
+## Installation
+
+``` git clone --single-branch --branch Fillit https://github.com/hlombard/42.git hlombard_Fillit ```
+
+## Compiling and running
 
 
-<h1 align="center">  Holygraph</h1>
-<p align="center">
-<img align="center" src="https://i.imgur.com/nXJf2iY.png">
-</p>
+Run `make`
+
+Once executable is created : `./fillit ./tetriminos_lists/tetriminos_file`
+
+## Compatibility
+
+Developed on macOS X.
