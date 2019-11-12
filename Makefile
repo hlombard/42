@@ -5,60 +5,57 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hlombard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/03/31 13:48:14 by hlombard          #+#    #+#              #
-#    Updated: 2019/10/29 11:44:12 by hlombard         ###   ########.fr        #
+#    Created: 2019/07/05 16:09:00 by hlombard          #+#    #+#              #
+#    Updated: 2019/10/29 19:16:47 by hlombard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fdf
-
-LIBFTPRINTF = ft_printf/libftprintf.a
-
-LIBFT = ft_printf/libft/libft.a
-
-SRC  =	srcs/ft_colors.c \
-		srcs/ft_events_1.c \
-		srcs/ft_events_2.c \
-		srcs/ft_fdf.c \
-		srcs/ft_get_map.c \
-		srcs/ft_hooks.c \
-		srcs/ft_mlx_init.c \
-		srcs/ft_render.c \
-		srcs/ft_utils.c \
-
-INC = includes/fdf.h
-
-INC_FOLD = includes/
-
-FT_PRINTF = ft_printf/
-
-MINILIBX = -L ./minilibx -lmlx -framework OpenGL -framework Appkit
-
-MLX_FOLD = -C ./minilibx
+NAME = fractol
 
 CC = gcc
 
+LIBFT = libft/
+
+LIBFT.a = libft/libft.a
+
+INC_FOLD = includes/
+
+INC = includes/fractol.h
+
+MLX = -L ./minilibx -lmlx -framework OpenGL -framework Appkit
+
+CFLAGS = -Wall -Werror -Wextra -O3 -flto -I $(LIBFT) -I $(INC_FOLD)
+
+SRC = srcs/fractol.c \
+	  srcs/init.c	\
+	  srcs/init_types.c \
+	  srcs/keyboard_events.c \
+	  srcs/mouse_events.c \
+	  srcs/gpu.c \
+	  srcs/utils.c
+
 OBJ = $(SRC:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror -I $(FT_PRINTF) -I $(INC_FOLD)
+all: $(NAME) $(LIBFT)
 
-all: $(NAME) $(FT_PRINTF)
-
-$(NAME): $(FT_PRINTF) $(INC_FOLD) Makefile $(OBJ)
-	@make -C $(FT_PRINTF)
-	@make $(MLX_FOLD)
-	$(CC) $(OBJ) $(LIBFT) $(LIBFTPRINTF) $(MINILIBX) -o $(NAME)
+$(NAME): $(LIBFT) $(INC_FOLD) Makefile $(OBJ)
+		@make -C $(LIBFT)
+		@make -C minilibx
+		$(CC) -I /usr/local/include $(OBJ) $(LIBFT.a) $(MLX) -framework OpenCL -o $(NAME)
+		@echo "\033[32m$(NAME) created ! \033[0m"
 
 %.o: %.c $(INC)
-	$(CC) $(CFLAGS) -o $@ -c $<
+		$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
-	@make -C $(FT_PRINTF) clean
-	@make $(MLX_FOLD) clean
-	@/bin/rm -Rf $(OBJ)
+		@make -C $(LIBFT) clean
+		@make -C minilibx clean
+		@rm -rf $(OBJ)
 
 fclean: clean
-	@make -C $(FT_PRINTF) fclean
-	@/bin/rm -Rf $(NAME)
+		@make -C $(LIBFT) fclean
+		@/bin/rm -f $(NAME)
+		@echo "\033[31m$(NAME) deleted\033[0m"
 
 re: fclean all
+

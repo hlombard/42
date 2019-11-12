@@ -1,17 +1,19 @@
-# Fils de Fer (FdF)
+# Fractol  <img align="right" src="http://i.imgur.com/zuWTuWk.png" width="10%" height="100">
+Discover 2D programming and the psychedelic universe of fractals, using minilibX (a basic Graphic library).
 
-This project is about creating a simplified 3D graphic representation of a relief landscape based on an isometric projection. Using minilibX (a basic Graphic library).
+Implemented with OpenCL, parallel computing on GPU.
 
 ## Preview
 
-<img  align="left"  src="https://media.giphy.com/media/jV5MLtO9Mutl5ZQq58/giphy.gif"  width="45%"  height="250px"  >
-<img  align="right"  src="https://i.imgur.com/g4j8mQO.png"  width="45%"  height="250px">
+<img align="left" src="https://media.giphy.com/media/mGV4koIhi1AchoXMOR/giphy.gif" width="45%" height="250px" >
 
-<br><br><br><br><br>
+<img align="right" src="https://media.giphy.com/media/QVyFdsO6DsPysFq39T/giphy.gif" width="45%" height="250px" >
+ 
+<br> <br> <br> <br> <br>
 
-## <br><br><br><br>Installation
+## <br> <br> <br> <br> Installation
 
-``` git clone --single-branch --branch FdF https://github.com/hlombard/42.git hlombard_FdF ```
+``` git clone --single-branch --branch fractol https://github.com/hlombard/42.git hlombard_fractol ```
 
 
 ## Compiling and running
@@ -19,16 +21,18 @@ This project is about creating a simplified 3D graphic representation of a relie
 
 Run `make`
 
-Once executable is created : `./fdf ./maps/42.fdf`
+Once executable is created : `./fractol -name`
 
-You can also enter a 2nd and a 3rd argument to set window resolution : `./fdf ./maps/42.fdf`  ``1280``  ``960``
+Fractals available: 
 
-
-(default is 1920 x 1080)
+- -julia 
+- -mandelbrot
+- -tricorn 
+- -bs (burningship)
 
 
 ## Compatibility
 
 Developed on macOS X.
 
-macOS Sierra: Remove the ``Werror`` flag in the Makefile and ignore the "deprecated" warnings.
+macOS Sierra: Remove the ``-Werror`` flag in the Makefile and ignore the OpenCL's "deprecated" warnings.
