@@ -1,42 +1,34 @@
-<img src="https://i.imgur.com/rfq7mfl.png" width="100%" height="300">
+# Fils de Fer (FdF)
 
-# Fillit
+This project is about creating a simplified 3D graphic representation of a relief landscape based on an isometric projection. Using minilibX (a basic Graphic library).
 
-For this project, we get a list of multiple tetriminos that looks like this:
+## Preview
 
-```
-##..
-#...
-#...
-....
+<img  align="left"  src="https://media.giphy.com/media/jV5MLtO9Mutl5ZQq58/giphy.gif"  width="45%"  height="250px"  >
+<img  align="right"  src="https://i.imgur.com/g4j8mQO.png"  width="45%"  height="250px">
 
-..##
-..##
-....
-....
-```
+<br><br><br><br><br>
 
-The position of the tetriminos in the list has to be asigned to a letter: from "A" to "Z"
+## <br><br><br><br>Installation
 
-The final solution has to be the smallest square grid, containing all the tetriminos.
+``` git clone --single-branch --branch FdF https://github.com/hlombard/42.git hlombard_FdF ```
 
-(Prioritizing placement to the top left of the grid, on letter ascending order)
-
-It looks like this:
-
-<img src="https://i.imgur.com/rRBKn8P.png">
-
-## Installation
-
-``` git clone --single-branch --branch Fillit https://github.com/hlombard/42.git hlombard_Fillit ```
 
 ## Compiling and running
 
 
 Run `make`
 
-Once executable is created : `./fillit ./tetriminos_lists/tetriminos_file`
+Once executable is created : `./fdf ./maps/42.fdf`
+
+You can also enter a 2nd and a 3rd argument to set window resolution : `./fdf ./maps/42.fdf`  ``1280``  ``960``
+
+
+(default is 1920 x 1080)
+
 
 ## Compatibility
 
 Developed on macOS X.
+
+macOS Sierra: Remove the ``Werror`` flag in the Makefile and ignore the "deprecated" warnings.
