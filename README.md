@@ -1,30 +1,45 @@
+# Push_Swap
 
-<p align="center">
-  <img src="https://i.imgur.com/GzO2IMr.png" alt="42Logo">
-</p>
+**This is a sorting algorithm project.**
 
-<h2 align="center">Some of the Projects I worked on at 42 Paris</h2>
-<br>
+We have 2 stacks called Stack A and Stack B, when the program starts, all the numbers given in parameters are stored in Stack A.
 
-<h4>This repository is hosting the following Projects through its branches : </h4>
+The goal is to sort Stack A from biggest to smallest using the Stack B and a limited set of instructions.
 
-- **Common [Left branch]**
-	- [Fillit](https://github.com/hlombard/42/tree/Fillit) : Backtracking algorithm to fit tetriminos in the smallest possible grid
+## Instructions
 
-- **Algorithm [Right branch]** (from the simplest to the hardest)
-	- [Filler] Uploading soon..
-	- [push_swap] Currently working on it..
-	- [COREWAR](https://github.com/hlombard/42/tree/Corewar) : C implementation of the Core War Game
+**sa : swap a** - swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements).
 
-- **Graphics [Lower branch]** (from the simplest to the hardest)
-	- [FDF](https://github.com/hlombard/42/tree/FdF) : Wireframe rasterizer with Bresenham's line algorithm
-	- [Fractol](https://github.com/hlombard/42/tree/fractol) : Psychedelic universe of Fractals
-	
-- **Web**
-	- [Piscine PHP](https://github.com/hlombard/Piscine_PHP) : html, css, php, mysql, javascript, jquery.`` (hosted on another repository)``
+**sb : swap b** - swap the first 2 elements at the top of stack b. Do nothing if there is only one or no elements).
 
+**ss : sa and sb at the same time**.
 
-<h1 align="center">  Holygraph</h1>
-<p align="center">
-<img align="center" src="https://i.imgur.com/nXJf2iY.png">
-</p>
+**pa : push a** - take the first element at the top of b and put it at the top of a. Do nothing if b is empty.
+
+**pb : push b** - take the first element at the top of a and put it at the top of b. Do nothing if a is empty.
+
+**ra : rotate a** - shift up all elements of stack a by 1. The first element becomes the last one.
+
+**rb : rotate b** - shift up all elements of stack b by 1. The first element becomes the last one.
+
+**rr : ra and rb at the same time.**
+
+**rra : reverse rotate a** - shift down all elements of stack a by 1. The last element becomes the first one.
+
+**rrb : reverse rotate b** - shift down all elements of stack b by 1. The last element becomes the first one.
+
+**rrr : rra and rrb at the same time.**
+
+## Installation
+
+``` git clone --single-branch --branch push_swap https://github.com/hlombard/42.git hlombard_ps ```
+
+## Compiling and running
+
+Run `make`
+
+Once executable are created : `ARG="<list of numbers>;" ./push_swap $ARG | ./checker $ARG`
+
+## Compatibility
+
+Developed on macOS X.
