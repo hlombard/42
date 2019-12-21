@@ -13,7 +13,7 @@
 
 - **Algorithm [Right branch]** (from the simplest to the hardest)
 	- [Filler] Uploading soon..
-	- [push_swap] Currently working on it..
+	- [Push_swap](https://github.com/hlombard/42/tree/push_swap) : Sorting algorithm using two stacks
 	- [COREWAR](https://github.com/hlombard/42/tree/Corewar) : C implementation of the Core War Game
 
 - **Graphics [Lower branch]** (from the simplest to the hardest)
