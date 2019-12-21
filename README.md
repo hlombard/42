@@ -26,5 +26,5 @@
 
 <h1 align="center">  Holygraph</h1>
 <p align="center">
-<img align="center" src="https://i.imgur.com/nXJf2iY.png">
+<img align="center" src="https://i.imgur.com/pv7APfU.png">
 </p>
