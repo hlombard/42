@@ -38,7 +38,7 @@ The goal is to sort Stack A from biggest to smallest using the Stack B and a lim
 
 Run `make`
 
-Once executable are created : `ARG="<list of numbers>;" ./push_swap $ARG | ./checker $ARG`
+Once executables are created : `ARG="<list of numbers (no duplicates)>"; ./push_swap $ARG | ./checker $ARG`
 
 ## Compatibility
 
