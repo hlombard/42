@@ -4,7 +4,7 @@
 
 ## Preview
 
-<img  align="center"  src="https://i.gyazo.com/ad94680ba9663dc4c9f4f93bdde28a5e.gif"  width="90%"  height="130px">
+<img  align="center"  src="https://i.gyazo.com/98b4cef8dbe2b948556768941e087dd2.gif"  width="100%"  height="100%">
 
 ## Installation
 
