@@ -21,7 +21,7 @@
 
 <h3 align="center" > [ Graphics ] </h3> </br>
 
-|  &nbsp;&nbsp;&nbsp;Name &nbsp;&nbsp;&nbsp;&nbsp;|     Description     | Language | Difficulty | Link  |
+|  &nbsp;&nbsp;&nbsp;Name  &nbsp;&nbsp;&nbsp;|     Description     | Language | Difficulty | Link  |
 |:--------:|:-----------:|:--------:|:----------:|:-----:|
 |   FDF   |Wireframe rasterizer with Bresenham's line algorithm |     C    |     🔥     |   [HERE](https://github.com/hlombard/42/tree/FdF)   |
 | Fractol |     Psychedelic universe of Fractals with OpenCL     |     C    |     🔥     | [HERE](https://github.com/hlombard/42/tree/fractol) |
@@ -29,7 +29,7 @@
 
 <h3 align="center" > [ Web ] </h3> </br>
 
-|  &nbsp;&nbsp;&nbsp;Name  &nbsp;&nbsp;&nbsp;&nbsp;|     Description     | Language | Difficulty | Link  |
+|  &nbsp;&nbsp;&nbsp;Name  &nbsp;&nbsp;&nbsp;|     Description     | Language | Difficulty | Link  |
 |:--------:|:-----------:|:--------:|:----------:|:-----:|
 | Piscine PHP |  php, html, css, js, jquery ``(hosted on another repo)`` |    <=   |     🔥    | [HERE](https://github.com/hlombard/Piscine_PHP) |
 </br>
