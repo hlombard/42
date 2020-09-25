@@ -1,35 +1,29 @@
-<p align="center">
-  <img src="https://i.imgur.com/GzO2IMr.png" alt="42Logo">
-</p>
+# Ft_linear_regression
 
-<h2 align="center">Some of the Projects I worked on at 42 Paris</h2>
-<br>
+**A linear regression implemented with Gradient Descent**
 
-<h5 align="center">  This repository is hosting the following Projects through its branches : </h5>
+## Preview
 
-</br>
+<img  align="center"  src="https://i.gyazo.com/b4a63d4b7d43693a105a33a85cdab497.gif"  width="50%"  height="50%">
 
-<h3 align="center" > [ Algorithms ] </h3> </br>
+## Installation
 
-|  Name  |          Description           | Language | Difficulty |                          Link                         |
-|:--------------:|:-------------------------------------------------------------:|:--------:|:----------:|:-----------------------------------------------------:|
-|   Fillit  | Backtracking algorithm to fit tetriminos in the smallest grid |     C    |     🔥     |   [HERE](https://github.com/hlombard/42/tree/Fillit)  |
-| Push_swap |               Sorting algorithm using two stacks              |     C    |     🔥     | [HERE](https://github.com/hlombard/42/tree/push_swap) |
-|  COREWAR  |             C implementation of the Core War Game             |     C    |     🔥🔥🔥     |  [HERE](https://github.com/hlombard/42/tree/Corewar)  |
-|  Ft_ssl_md5 |             Implementation of MD5 and SHA-2 algorithms             |     C    |     🔥🔥     |  [HERE](https://github.com/hlombard/42/tree/ft_ssl_md5) |
-</br>
+``` git clone --single-branch --branch ft_linear_regression $GOPATH/src/ft_linear_regression ```
 
-<h3 align="center" > [ Graphics ] </h3> </br>
+## Compiling and running
 
-|  Name  |          Description          | Language | Difficulty |                         Link                        |
-|:-------:|:----------------------------------------------------:|:--------:|:----------:|:---------------------------------------------------:|
-|   FDF   | Wireframe rasterizer with Bresenham's line algorithm   |     C    |     🔥     |   [HERE](https://github.com/hlombard/42/tree/FdF)   |
-| Fractol |     Psychedelic universe of Fractals with OpenCL     |     C    |     🔥     | [HERE](https://github.com/hlombard/42/tree/fractol) |
-</br>
+<h4>- First we train the algorithm:</h4>
 
-<h3 align="center" > [ Web ] </h3> </br>
 
-|  Name  |           Description          | Language | Difficulty |                       Link                      |
-|:-----------:|:--------------------------:|:--------:|:----------:|:-----------------------------------------------:|
-| Piscine PHP | php, html, css, js, jquery ``(hosted on another repo)`` |    <=   |     🔥    | [HERE](https://github.com/hlombard/Piscine_PHP) |
-</br>
+- ``` cd training; go run train.go ```
+This will generate a file thetas.txt by default
+
+<h4>- Now we can predict:</h4>
+
+-  ``` cd prediction; go run predict.go ```
+Enter an X value, and it will predict his Y value using t0 and t1 generated in the thetas.txt
+
+Flags available: ./train.go | ./predict.go **-help**
+
+## Compatibility
+Developed on Linux Xubuntu. </br>
