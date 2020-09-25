@@ -29,7 +29,7 @@
 
 <h3 align="center" > [ Web ] </h3> </br>
 
-|   Name   |           Description          | Language | Difficulty |                       Link                      |
-|:-----------:|:--------------------------:|:--------:|:----------:|:-----------------------------------------------:|
-| Piscine PHP | php, html, css, js, jquery ``(hosted on another repo)`` |    <=   |     🔥    | [HERE](https://github.com/hlombard/Piscine_PHP) |
+|   Name   | Description | Language | Difficulty |                       Link                      |
+|:-----------:|:-:|:--------:|:----------:|:-----------------------------------------------:|
+| Piscine PHP | &nbsp;&nbsp;&nbsp;&nbsp; php, html, css, js, jquery ``(hosted on another repo)`` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;               |    <=   |     🔥    | [HERE](https://github.com/hlombard/Piscine_PHP) |
 </br>
