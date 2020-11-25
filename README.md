@@ -1,38 +1,55 @@
-<p align="center">
-  <img src="https://i.imgur.com/GzO2IMr.png" alt="42Logo">
-</p>
-<h2 align="center">Some of the Projects I worked on at 42 Paris</h2>
+# ft_ssl_des
+
+
+**- Data Encryption Standard ecb/cbc/cfb**
 <br>
-
-<h5 align="center">  This repository is hosting the following Projects through its branches : </h5>
-
-</br>
-
-<h3 align="center" > [ Algorithms ] </h3> </br>
-
-|Name|     Description     | Language | Difficulty | Link  |
-|:--------:|:-----------:|:--------:|:----------:|:-----:|
-|   Fillit  |  Backtracking algorithm to fit tetriminos in a grid |     C    |     🔥     |   [HERE](https://github.com/hlombard/42/tree/Fillit)  |
-| Push_swap |               Sorting algorithm using two stacks              |     C    |     🔥     | [HERE](https://github.com/hlombard/42/tree/push_swap) |
-|  COREWAR  |             C implementation of the Core War Game             |     C    |     🔥🔥🔥     |  [HERE](https://github.com/hlombard/42/tree/Corewar)  |
-|  ft_ssl_md5 |             Implementation of MD5 and SHA-2 algorithms             |     C    |     🔥🔥     |  [HERE](https://github.com/hlombard/42/tree/ft_ssl_md5) |
-|  ft_linear_regression |           Machine learning: Linear regression           |     Go    |     🔥     | [HERE](https://github.com/hlombard/42/tree/ft_linear_regression)|
-|   dr-quine  |  Small project to learn about auto replications |     ASM/C/GO    |     🔥     |   [HERE](https://github.com/hlombard/42/tree/dr-quine)  |
-
-</br>
+**- Base64 Encoding**
 
 
-<h3 align="center" > [ Graphics ] </h3> </br>
+## Clone
 
-|  &nbsp;&nbsp;&nbsp;Name  &nbsp;&nbsp;&nbsp;|     Description     | Language | Difficulty | Link  |
-|:--------:|:-----------:|:--------:|:----------:|:-----:|
-|   FDF   |Wireframe rasterizer with Bresenham's line algorithm |     C    |     🔥     |   [HERE](https://github.com/hlombard/42/tree/FdF)   |
-| Fractol |     Psychedelic universe of Fractals with OpenCL     |     C    |     🔥     | [HERE](https://github.com/hlombard/42/tree/fractol) |
-</br>
+``` git clone --single-branch --branch ft_ssl_des https://github.com/hlombard/42.git ft_ssl_des ```
 
-<h3 align="center" > [ Web ] </h3> </br>
+## Compiling and running
 
-|  &nbsp;&nbsp;&nbsp;Name  &nbsp;&nbsp;&nbsp;|     Description     | Language | Difficulty | Link  |
-|:--------:|:-----------:|:--------:|:----------:|:-----:|
-| Piscine PHP |  php, html, css, js, jquery ``(hosted on another repo)`` |    <=   |     🔥    | [HERE](https://github.com/hlombard/Piscine_PHP) |
-</br>
+Run `make`
+
+Once executable is created : **./ft_ssl [des_type/enc_type] [flags]**
+
+<h5>
+
+- **des_type:**
+
+    - des-ecb
+	- des-cbc
+	- des-cfb
+
+- **enc_type:**
+
+    - base64
+
+
+- **FLAGS:**
+
+    - -e, encrypt mode (default)
+	- -d, decrypt mode
+	- -i, input file for message
+	- -o, output file for message
+	- -k, key in hex is the next arguement
+	- -p, password in ascii is the next argument.
+	- -P, print key/salt/vector
+	- -s, the salt in hex is the next argument.
+	- -v, initialization vector in hex is the next argument.
+	- -a, decode/encode the input/output in base64, depending on the encrypt mode
+	
+### Usage example
+
+$ cat auteur
+> hlombard
+
+$ ./ft_ssl des-ecb -i auteur -o auteur.enc -k "0123456789ABCDEF" -a ;cat auteur.enc
+> nky7hRQdoPzga2spBpr1xA==
+
+$ ./ft_ssl des-ecb -i auteur.enc -k "0123456789ABCDEF" -a -d
+> hlombard
+
