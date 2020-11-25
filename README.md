@@ -1,4 +1,4 @@
- <p align="center">
+<p align="center">
   <img src="https://i.imgur.com/GzO2IMr.png" alt="42Logo">
 </p>
 <h2 align="center">Some of the Projects I worked on at 42 Paris</h2>
@@ -17,7 +17,10 @@
 |  COREWAR  |             C implementation of the Core War Game             |     C    |     🔥🔥🔥     |  [HERE](https://github.com/hlombard/42/tree/Corewar)  |
 |  ft_ssl_md5 |             Implementation of MD5 and SHA-2 algorithms             |     C    |     🔥🔥     |  [HERE](https://github.com/hlombard/42/tree/ft_ssl_md5) |
 |  ft_linear_regression |           Machine learning: Linear regression           |     Go    |     🔥     | [HERE](https://github.com/hlombard/42/tree/ft_linear_regression)|
+|   dr-quine  |  Small project to learn about auto replications |     ASM/C/GO    |     🔥     |   [HERE](https://github.com/hlombard/42/tree/dr-quine)  |
+
 </br>
+
 
 <h3 align="center" > [ Graphics ] </h3> </br>
 
