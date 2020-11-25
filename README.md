@@ -16,6 +16,7 @@
 | Push_swap |               Sorting algorithm using two stacks              |     C    |     🔥     | [HERE](https://github.com/hlombard/42/tree/push_swap) |
 |  COREWAR  |             C implementation of the Core War Game             |     C    |     🔥🔥🔥     |  [HERE](https://github.com/hlombard/42/tree/Corewar)  |
 |  ft_ssl_md5 |             Implementation of MD5 and SHA-2 algorithms             |     C    |     🔥🔥     |  [HERE](https://github.com/hlombard/42/tree/ft_ssl_md5) |
+|  ft_ssl_des |             Cryptographics algorithms DES ecb/cbc/cfb             |     C    |     🔥🔥🔥     |  [HERE](https://github.com/hlombard/42/tree/ft_ssl_des) |
 |  ft_linear_regression |           Machine learning: Linear regression           |     Go    |     🔥     | [HERE](https://github.com/hlombard/42/tree/ft_linear_regression)|
 |   dr-quine  |  Small project to learn about auto replications |     ASM/C/GO    |     🔥     |   [HERE](https://github.com/hlombard/42/tree/dr-quine)  |
 
