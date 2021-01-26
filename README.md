@@ -34,9 +34,10 @@
 | Fractol |     Psychedelic universe of Fractals with OpenCL     |     C    |     🔥     | [HERE](https://github.com/hlombard/42/tree/fractol) |
 </br>
 
-<h3 align="center" > [ Web ] </h3> </br>
+<h3 align="center" > [ Piscines ] </h3> </br>
 
 |  &nbsp;&nbsp;&nbsp;Name  &nbsp;&nbsp;&nbsp;|     Description     | Language | Difficulty | Link  |
 |:--------:|:-----------:|:--------:|:----------:|:-----:|
 | Piscine PHP |  php, html, css, js, jquery ``(hosted on another repo)`` |    <=   |     🔥    | [HERE](https://github.com/hlombard/Piscine_PHP) |
+| Piscine CPP |  C++ ``(hosted on another repo)`` |    <=   |     🔥    | [HERE](https://github.com/hlombard/Piscine_CPP) |
 </br>
