@@ -3,7 +3,7 @@
 </p>
 
 <h3 align="center">My current 42 level</h3>
-<p align="center"> <img src="https://i.gyazo.com/a380ea71fc0f72526e8eb4d4819d7267.png" alt="level"> </p> </br></br>
+<p align="center"> <img src="assets/current_42_level.png" alt="level"> </p> </br></br>
 
 <h2 align="center">Some of the Projects I worked on at 42 Paris</h2>
 
