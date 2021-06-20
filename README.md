@@ -25,7 +25,7 @@
 
 </br>
 
-<h3 align="center" > [ WEB ] </h3> </br>
+<h3 align="center" > [ Web ] </h3> </br>
 
 |  &nbsp;&nbsp;&nbsp;Name  &nbsp;&nbsp;&nbsp;|     Description     | Language | Difficulty | Link  |
 |:--------:|:-----------:|:--------:|:----------:|:-----:|
