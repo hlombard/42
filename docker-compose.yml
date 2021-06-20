@@ -1,0 +1,57 @@
+version: "3.9"
+services:
+    server:
+      build:
+        context: .
+        dockerfile: ./Docker/Dockerfile_server
+      ports:
+        - "8080:8080"
+        - "8081:8081"
+      volumes:
+        - ./Server:/go/src/matcha-app
+      container_name: server
+      environment:
+        WAIT_HOSTS: db:3306
+      env_file:
+        - private.env
+      depends_on:
+        - db
+      tty: true
+
+    frontend:
+      build:
+        context: .
+        dockerfile: Docker/Dockerfile_front
+      ports:
+        - "3000:3000"
+      volumes:
+        - ./Client:/app
+        - /app/node_modules/
+      container_name: frontend
+      environment:
+      - CHOKIDAR_USEPOLLING=true
+          #tty: true
+      stdin_open: true
+
+    db:
+      image: mysql
+      restart: always
+      cap_add:
+      - SYS_NICE  # CAP_SYS_NICE
+      environment:
+        HOSTNAME: 'matcha_db'
+        MYSQL_ROOT_PASSWORD: 'root-secret-pw'
+        MYSQL_DATABASE: 'matcha_db'
+        MYSQL_USER: 'server_go'
+        MYSQL_PASSWORD: 'server_go_secret_pw'
+        TZ: 'Europe/Paris'
+      volumes:
+        - sqldata:/var/lib/mysql
+        - ./db_init.sql:/docker-entrypoint-initdb.d/1.sql
+      container_name: mySQL
+      ports:
+        - "3306:3306"
+      tty: true
+
+volumes:
+  sqldata:

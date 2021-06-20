@@ -1,0 +1,18 @@
+.suggestion-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  .suggestion-card {
+    color: black !important;
+
+    .suggestion-content {
+      display: grid;
+    }
+    .profile-info-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

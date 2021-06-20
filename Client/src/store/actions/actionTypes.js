@@ -1,0 +1,42 @@
+export const ACCOUNT_CREATE = "ACCOUNT_CREATE";
+export const ACCOUNT_ERROR = "ACCOUNT_ERROR";
+export const ACCOUNT_START = "ACCOUNT_START";
+export const FORGOT_PASSWORD = "FORGOT_PASSWORD";
+export const START_FORGOT_PASSWORD = "START_FORGOT_PASSWORD";
+export const FP_ERROR = "FP_ERROR";
+export const FP_PASSWORD_RESET = "FP_PASSWORD_RESET";
+
+export const AUTH_START = "AUTH_START";
+export const AUTH_SUCCESS = "AUTH_SUCCESS";
+export const AUTH_ERROR = "AUTH_ERROR";
+export const AUTH_LOGOUT = "AUTH_LOGOUT";
+
+export const PROFILE_GET_DATA = "PROFILE_GET_DATA";
+export const PROFILE_UPDATE = "PROFILE_UPDATE";
+export const PROFILE_ERROR_UPDATE = "PROFILE_ERROR_UPDATE";
+export const PROFILE_START = "PROFILE_START";
+export const POST_IMAGE = "POST_IMAGE";
+export const POST_TAGS = "POST_TAGS";
+export const RELOAD_CONNECTION = "RELOAD_CONNECTION";
+
+export const GET_SUGGESTION = "GET_SUGGESTION";
+export const ERROR_SUGGESTION = "ERROR_SUGGESTION";
+export const START_SUGGESTION = "START_SUGGESTION";
+export const STORE_FILTERED_SUGG = "STORE_FILTERED_SUGG";
+
+export const SEND_TOAST = "SEND_TOAST";
+export const RESET_TOAST = "RESET_TOAST";
+
+export const STOCK_NOTIFY = "STOCK_NOTIFY";
+export const ADD_NOTIFY = "ADD_NOTIFY";
+export const DELETE_NOTIFY = "DELETE_NOTIFY";
+export const ADD_CHAT = "ADD_CHAT";
+export const STOCK_MATCH = "STOCK_MATCH";
+
+export const START_CHAT = "START_CHAT";
+export const STOCK_CHAT = "STOCK_CHAT";
+export const ADD_MESSAGE = "ADD_MESSAGE";
+export const SET_SHOW_CHAT = "SET_SHOW_CHAT";
+export const IS_TYPING = "IS_TYPING";
+
+export const WS_CONNECT = "WS_CONNECT";

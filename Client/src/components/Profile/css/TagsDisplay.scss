@@ -1,0 +1,49 @@
+.tags-display {
+  justify-self: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 20rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  grid-column: 2/3;
+  grid-row: 4/5;
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .tag-container {
+    margin-right: 0.1rem;
+    margin-left: 0.1rem;
+  }
+
+  .tag-input-form {
+    margin: 0rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    border-style: solid;
+    border-color: #ececec;
+    width: 100%;
+  }
+  .send-button {
+    grid-column: 2/3;
+    margin-top: 0rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    border-radius: 0rem 0rem 0rem 0rem;
+  }
+  .message-box {
+    grid-column: 1/2;
+    margin: 0rem;
+
+    input#formBasicEmail {
+      margin: 0rem;
+      height: 100%;
+      border-radius: 0rem;
+      border: none;
+      border-radius: 0rem 0rem 0rem 0.2rem;
+    }
+  }
+}

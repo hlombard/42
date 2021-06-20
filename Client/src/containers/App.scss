@@ -1,0 +1,229 @@
+:root {
+  --pink-matcha: #ec5990;
+  --hover-pink-matcha: #bf1650;
+  --black-background: #0e101c;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
+.App {
+  text-align: center;
+
+  nav {
+    padding: 0rem;
+  }
+}
+.app-page-container {
+  padding-bottom: 6rem;
+  padding-top: 5rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.profile-card {
+  width: auto;
+  margin-top: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0rem 0rem 1.3rem 0rem antiquewhite;
+}
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .profile-card {
+    width: 20rem;
+    align-self: center;
+  }
+  .app-page-container {
+    padding-top: 7rem;
+  }
+}
+
+button:focus,
+button:active,
+button:hover,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+body {
+  background: var(--black-background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(79, 98, 148);
+}
+
+.form {
+  background: var(--black-background);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+p {
+  color: var(--pink-matcha);
+}
+
+/* p::before {
+	display: inline;
+	content: "⚠ ";
+  } */
+
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+select {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+label {
+  line-height: 2;
+  text-align: left;
+  display: block;
+  margin-bottom: 13px;
+  color: white;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+button[type="submit"],
+input[type="submit"] {
+  background: var(--pink-matcha);
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 10px;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+  background: var(--hover-pink-matcha);
+}
+
+button[type="submit"]:active,
+input[type="button"]:active,
+input[type="submit"]:active {
+  transition: 0.3s all;
+  transform: translateY(3px);
+  border: 1px solid transparent;
+  opacity: 0.8;
+}
+
+input:disabled {
+  opacity: 0.4;
+}
+
+input[type="button"]:hover {
+  transition: 0.3s all;
+}
+
+button[type="submit"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+}
+
+.App {
+  margin: 0 auto;
+}
+
+button[type="button"] {
+  display: block;
+  appearance: none;
+  //background: #333;
+  //color: white;
+  border: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+hr {
+  margin-top: 30px;
+}
+
+button {
+  display: block;
+  appearance: none;
+  margin-top: 40px;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.alert-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.toast.show {
+  display: block;
+  opacity: 1;
+}
+.toast {
+  width: 25%;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  background-color: white;
+  background-color: #c0c0c0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0rem 0rem 1rem 0rem white;
+}
+.toast-header {
+  background: green;
+  background-color: white;
+  height: 2rem;
+  border-radius: 0rem;
+}
+.toast-body {
+  background-color: white;
+  font-weight: bold;
+}
+.toast-header .close {
+  background-color: #11ffee00;
+  color: black;
+}

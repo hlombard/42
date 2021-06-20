@@ -1,0 +1,36 @@
+.pmanager-grid p {
+	color: white;
+}
+.pmanager-grid {
+	text-transform: lowercase;
+}
+.pmanager-grid button {
+	text-transform: none;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0rem;
+}
+.pmanager-grid .pman-nav-link {
+	color: black;
+	padding: 0 0 0 0;
+	background-color: inherit;
+}
+/* button#profile-manager-drop {
+	box-shadow: 0rem -2rem 5rem 1rem #333333;
+} */
+.pmanager-grid .pman-nav-link:hover {
+	/* background-color: #e9ecef; */
+	background-color: inherit;
+}
+
+.pmanager-grid button::after {
+	display: none;
+}
+.pmanager-grid .dropdown {
+	display:flex;
+	justify-content: flex-end;
+}
+
+.pman-button > .dropdown-menu {
+	left: auto;
+}

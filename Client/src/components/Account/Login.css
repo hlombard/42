@@ -1,0 +1,12 @@
+.login-form {
+	margin-top: 4rem;
+	width: 90%;
+}
+
+.login-submit {
+	width: 100%;
+}
+
+.login-form .other-link {
+	display: grid;
+}

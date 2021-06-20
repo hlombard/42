@@ -1,0 +1,31 @@
+.chat-room {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  padding-right: 1rem;
+
+  .profile-picture {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  }
+  .profile-picture:hover {
+    transition: 0.3s all;
+    transform: translate(-0.2rem, -3px);
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .profile-picture:active {
+    transition: 0.2s all;
+    transform: translate(-0.2rem, -6px);
+    border: 1px solid transparent;
+    opacity: 0.8;
+  }
+}
+
+.chat-pop {
+  padding: 0rem;
+}
+.room-name {
+  color: var(--pink-matcha);
+}

@@ -1,43 +1,78 @@
-<p align="center">
-  <img src="https://i.imgur.com/GzO2IMr.png" alt="42Logo">
-</p>
+# **42 MATCHA**
 
-<h3 align="center">My current 42 level</h3>
-<p align="center"> <img src="https://i.gyazo.com/a380ea71fc0f72526e8eb4d4819d7267.png" alt="level"> </p> </br></br>
+This project is about creating a client side rendering dating website.
 
-<h2 align="center">Some of the Projects I worked on at 42 Paris</h2>
-
-
-<h5 align="center">  This repository is hosting the following Projects through its branches : </h5>
-</br>
-
-<h3 align="center" > [ Algorithms ] </h3> </br>
-
-|Name|     Description     | Language | Difficulty | Link  |
-|:--------:|:-----------:|:--------:|:----------:|:-----:|
-|   Fillit  |  Backtracking algorithm to fit tetriminos in a grid |     C    |     🔥     |   [HERE](https://github.com/hlombard/42/tree/Fillit)  |
-| Push_swap |               Sorting algorithm using two stacks              |     C    |     🔥     | [HERE](https://github.com/hlombard/42/tree/push_swap) |
-|  COREWAR  |             C implementation of the Core War Game             |     C    |     🔥🔥🔥     |  [HERE](https://github.com/hlombard/42/tree/Corewar)  |
-|  ft_ssl_md5 |             Implementation of MD5 and SHA-2 algorithms             |     C    |     🔥🔥     |  [HERE](https://github.com/hlombard/42/tree/ft_ssl_md5) |
-|  ft_ssl_des |             Cryptographics algorithms DES ecb/cbc/cfb             |     C    |     🔥🔥🔥     |  [HERE](https://github.com/hlombard/42/tree/ft_ssl_des) |
-|  ft_linear_regression |           Machine learning: Linear regression           |     Go    |     🔥     | [HERE](https://github.com/hlombard/42/tree/ft_linear_regression)|
-|   dr-quine  |  Small project to learn about auto replications |     ASM/C/GO    |     🔥     |   [HERE](https://github.com/hlombard/42/tree/dr-quine)  |
+This project was made with [@ratin](https://github.com/ratin42) who worked on the frontend,
+</br>while I've been focusing on the backend.
 
 </br>
 
+## **TECHNOS**
 
-<h3 align="center" > [ Graphics ] </h3> </br>
+- Frontend using **React JS**
+    - **React-router** and functional component with **React hooks**.
+    - API data is fetched using **axios** and stocked in a **Redux** store.
+- Backend using **Golang**
+    - API with **Gin Web Framework** package.
+    - Websocket for the live messaging system with **Gorilla WebSocket** package and with the wonderful go routines.
+    - **JWT** for authentification with 1 short-lived Access token and 1 Refresh token to obtain renewed access token.
+- Database with **mySQL**
 
-|  &nbsp;&nbsp;&nbsp;Name  &nbsp;&nbsp;&nbsp;|     Description     | Language | Difficulty | Link  |
-|:--------:|:-----------:|:--------:|:----------:|:-----:|
-|   FDF   |Wireframe rasterizer with Bresenham's line algorithm |     C    |     🔥     |   [HERE](https://github.com/hlombard/42/tree/FdF)   |
-| Fractol |     Psychedelic universe of Fractals with OpenCL     |     C    |     🔥     | [HERE](https://github.com/hlombard/42/tree/fractol) |
 </br>
 
-<h3 align="center" > [ Piscines ] </h3> </br>
+Each of these are containerized using **docker-compose**.
 
-|  &nbsp;&nbsp;&nbsp;Name  &nbsp;&nbsp;&nbsp;|     Description     | Language | Difficulty | Link  |
-|:--------:|:-----------:|:--------:|:----------:|:-----:|
-| Piscine PHP |  php, html, css, js, jquery ``(hosted on another repo)`` |    <=   |     🔥    | [HERE](https://github.com/hlombard/Piscine_PHP) |
-| Piscine CPP |  C++ ``(hosted on another repo)`` |    <=   |     🔥    | [HERE](https://github.com/hlombard/Piscine_CPP) |
+
 </br>
+
+### **Documentation**
+
+[API](Server/api/README.md)
+</br>
+[WEBSOCKET](Server/websocket/README.md)
+
+</br>
+
+## **DEPLOYMENT**
+
+</br>
+
+1. First you need to fill the missing sensitive data in the ``private.env`` file:
+    - [Create an API key for the location API we've used](https://ipstack.com/signup/free)
+    - Set your gmail address and password and [activate less secured app access](https://myaccount.google.com/lesssecureapps)
+    
+    </br>
+
+    ``private.env`` file should look like this:
+
+    <img src="assets/matcha_private_env.png">
+
+    </br>
+    </br>
+
+
+2. Run and start:
+    - **``docker-compose up``** &rarr; http://localhost:3000/
+
+</br>
+
+
+
+## **MAIN FEATURES**
+
+</br>
+
+- Create an account that requires an email validation.
+- Create a suggestion list for each users based on their gender, gender preference, age preference, location, common interests.
+- Filter or Order the suggestion list based on the ratings, distance, age and common interests.
+- If two users like each others, it's a match, they now have access to a private live chat !
+- Users can block and rate other profiles.
+- Live notifications.
+
+</br>
+
+## **PREVIEW**
+
+</br>
+
+<img src="assets/matcha_profile.png">

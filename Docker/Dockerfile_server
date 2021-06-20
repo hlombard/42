@@ -1,0 +1,39 @@
+#Dockerfile
+FROM golang:1.15
+
+ENV GO111MODULE=on
+ENV GOFLAGS=-mod=readonly
+ENV APP_HOME /go/src/matcha-app
+ENV PORT 8080
+
+# Needs to be the same as mysql container
+ENV MYSQL_DATABASE matcha_db
+ENV MYSQL_USER server_go
+ENV MYSQL_PW server_go_secret_pw
+
+# Encryption key used to generate Personnal link
+ENV ENC_KEY 0123456789ABCDEF0123456789ABCDEF
+
+# Location API
+ENV LOCATION_API http://api.ipstack.com/
+
+# JWT Secrets
+ENV JWT_ACCESS jwt-access-secret
+ENV JWT_REFRESH jwt-refresh-secret
+
+
+WORKDIR $APP_HOME
+
+COPY Server/ .
+
+RUN go mod download
+RUN go get github.com/githubnemo/CompileDaemon
+RUN cp /usr/share/zoneinfo/Europe/Paris /etc/localtime
+
+EXPOSE 8080 8081
+
+# Download a script that will wait for WAIT_HOSTS to be reachable before running go server
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+RUN chmod +x /wait
+
+ENTRYPOINT /wait > /tmp/wait.log 2>&1 && CompileDaemon --build="go build -o api ./api" --command=./api/api -log-prefix=false | CompileDaemon --build="go build -o websocket ./websocket" --command=./websocket/websocket -log-prefix=false

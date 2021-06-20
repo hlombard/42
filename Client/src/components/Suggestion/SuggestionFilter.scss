@@ -1,0 +1,45 @@
+.suggestion-filters {
+  color: white;
+  min-width: 42rem;
+
+  .filters-fields {
+    display: grid;
+    grid-template-columns: 35% auto 35%;
+
+    .filter-container {
+      margin: 1rem 1rem;
+    }
+    .age-filter {
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
+    .distance-filter {
+      grid-row: 1/2;
+      grid-column: 2/3;
+    }
+    .rating-filter {
+      grid-row: 1/2;
+      grid-column: 3/4;
+    }
+    .tag-filter {
+      grid-row: 2/3;
+      grid-column: 1/2;
+    }
+    .sort-by {
+      margin: 1rem;
+      grid-row: 2/3;
+      grid-column: 3/4;
+    }
+    .nbr-of-items {
+      grid-row: 2/3;
+      grid-column: 2/3;
+      align-self: center;
+    }
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .suggestion-filters {
+    min-width: 18rem;
+  }
+}

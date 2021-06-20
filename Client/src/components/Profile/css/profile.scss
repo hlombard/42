@@ -1,0 +1,29 @@
+.profile-viewer {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .card-title {
+    font-size: 1rem;
+    grid-column: 1/2;
+    color: #908e8e;
+    text-align: start;
+    margin-top: 0.4rem;
+    margin-left: 0.5rem;
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+  }
+  .bio-text {
+    max-width: fit-content;
+    align-self: center;
+    margin: 1rem;
+  }
+  p {
+    color: black;
+    margin: 0rem;
+  }
+}

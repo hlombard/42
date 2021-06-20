@@ -1,0 +1,248 @@
+.about-me {
+  display: flex;
+  flex-direction: column;
+}
+.bio-text {
+  max-width: fit-content;
+  align-self: center;
+  margin: 1rem;
+}
+
+.button-cmp:hover {
+  transition: 0.3s all;
+  transform: translateY(4px);
+  box-shadow: 0rem 0rem 2.3rem 0.5rem antiquewhite;
+}
+.user-info {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  .profile-title-container {
+    display: flex;
+
+    .profile-pseudo {
+      margin-top: 0rem;
+    }
+    .report-svg {
+      height: 1rem;
+      align-self: center;
+      margin-left: 0.5rem;
+    }
+    .report-svg:hover {
+      transition: 0.3s all;
+      height: 1.1rem;
+    }
+    .report-svg:active {
+      transition: 0.3s all;
+      transform: translateY(3px);
+      border: 1px solid transparent;
+      opacity: 0.8;
+    }
+  }
+  .rating-stars {
+    margin-right: 0.5rem;
+    grid-column: 2/2;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: end;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    color: #908e8e;
+    text-align: start;
+    margin-top: 0.4rem;
+    margin-left: 0.5rem;
+  }
+  p {
+    color: black;
+    margin: 0rem;
+  }
+  .picture-item {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin: 1rem 2rem 0rem 2rem;
+  }
+  .profile-img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 10%;
+  }
+  .rating {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 1rem;
+    margin-top: 0.4rem;
+    justify-self: flex-start;
+  }
+  .action-button {
+    justify-self: start;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 7rem;
+    align-self: center;
+    justify-self: center;
+    margin-top: 1rem;
+
+    button {
+      height: 2rem;
+      width: 100%;
+      font-size: 0.7rem;
+      margin-bottom: 0.5rem;
+    }
+    button:active {
+      transition: 0.3s all;
+      transform: translateY(3px);
+      border: 1px solid transparent;
+      opacity: 0.8;
+    }
+
+    .like {
+      background-color: #007bff;
+    }
+    .like:hover {
+      background-color: #0158b6;
+    }
+    .unlike {
+      background-color: #9e19f7;
+    }
+    .unlike:hover {
+      background-color: #671d99;
+    }
+    .chat {
+      position: relative;
+      background-color: #19f750;
+      z-index: 6;
+    }
+    .chat:hover {
+      background-color: #149c36;
+    }
+    .block {
+      background-color: #dc3545;
+    }
+    .block:hover {
+      background-color: #ad2a37;
+    }
+  }
+
+  .status-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: flex-start;
+    margin-left: 0.5rem;
+
+    .green {
+      background: #0bf30b;
+    }
+    .red {
+      background: #ff020f;
+    }
+
+    .dot {
+      display: inline-flex;
+      border-radius: 50%;
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-right: 0.3rem;
+    }
+    .statut-string {
+      font-size: 0.8rem;
+      color: #908e8e;
+      font-style: italic;
+    }
+  }
+
+  .base-info {
+    display: grid;
+    text-align: left;
+    grid-column: 2/3;
+    grid-row: 2/4;
+    margin: 0rem 2rem 0rem 0rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    align-items: center;
+  }
+}
+.firstname {
+  font-size: 3rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-right: 0.5rem;
+  display: flex;
+}
+.lastname {
+  font-size: 3rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.age {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.location {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.gender {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.gender-target {
+  grid-column: 1/2;
+  grid-row: 5/6;
+}
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .user-info {
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+    padding: 0rem 1rem 1rem 1rem;
+
+    .picture-item {
+      grid-row: 2/3;
+      grid-column: 1/3;
+    }
+    .card-title {
+      margin-left: -0.5rem;
+    }
+    .firstname {
+      font-weight: bold;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .action-button {
+      grid-column: 1/3;
+      grid-row: 4/5;
+      margin-top: 1rem;
+      width: 100%;
+    }
+    .status-container {
+      margin-left: -0.5rem;
+    }
+    .base-info {
+      margin: 0rem;
+      margin-top: 0.5rem;
+      grid-column: 1/3;
+      grid-row: 3/4;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .rating {
+      justify-self: end;
+    }
+    .tags-display {
+      grid-column: 1/3;
+      grid-row: 5/6;
+    }
+  }
+}

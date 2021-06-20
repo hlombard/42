@@ -1,0 +1,17 @@
+FROM node:14.15.4-alpine3.10
+
+WORKDIR /app
+
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
+COPY ./Client/package.json ./
+COPY ./Client/package-lock.json ./
+
+RUN npm install
+
+COPY ./Client/ .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
